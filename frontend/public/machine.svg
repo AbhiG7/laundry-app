@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Machine body -->
+  <rect x="5" y="10" width="110" height="105" rx="14" ry="14" fill="#2a2a4a" stroke="#4a5aa0" stroke-width="3"/>
+
+  <!-- Top panel -->
+  <rect x="5" y="10" width="110" height="22" rx="14" ry="14" fill="#1e1e3a"/>
+  <rect x="5" y="24" width="110" height="8" fill="#1e1e3a"/>
+
+  <!-- Control dots -->
+  <circle cx="20" cy="21" r="4" fill="#e94560"/>
+  <circle cx="34" cy="21" r="4" fill="#f0e040"/>
+  <circle cx="48" cy="21" r="4" fill="#40e060"/>
+
+  <!-- Dial -->
+  <circle cx="95" cy="21" r="8" fill="#2a2a4a" stroke="#4a5aa0" stroke-width="2"/>
+  <line x1="95" y1="13" x2="95" y2="18" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Door outer ring -->
+  <circle cx="60" cy="75" r="40" fill="#1a1a30" stroke="#4a5aa0" stroke-width="3"/>
+
+  <!-- Door inner -->
+  <circle cx="60" cy="75" r="32" fill="#0d0d20" stroke="#2a3a6e" stroke-width="2"/>
+
+  <!-- Drum window -->
+  <circle cx="60" cy="75" r="26" fill="#111125" stroke="#3a4a80" stroke-width="1.5"/>
+
+  <!-- Drum pattern (porthole lines) -->
+  <circle cx="60" cy="75" r="20" fill="none" stroke="#1e2a50" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Water/clothes suggestion inside drum -->
+  <ellipse cx="55" cy="78" rx="10" ry="6" fill="#1e3a5a" opacity="0.8"/>
+  <ellipse cx="65" cy="72" rx="8" ry="5" fill="#2a1e4a" opacity="0.8"/>
+
+  <!-- Door handle -->
+  <rect x="82" y="72" width="14" height="6" rx="3" fill="#3a4a80" stroke="#4a5aa0" stroke-width="1"/>
+
+  <!-- Bottom panel -->
+  <rect x="12" y="108" width="96" height="4" rx="2" fill="#1e1e3a"/>
+
+  <!-- Feet -->
+  <rect x="18" y="112" width="14" height="3" rx="1.5" fill="#4a5aa0"/>
+  <rect x="88" y="112" width="14" height="3" rx="1.5" fill="#4a5aa0"/>
+</svg>

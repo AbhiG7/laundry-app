@@ -1,0 +1,80 @@
+.panel {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--color-panel);
+  border: var(--border-card);
+  border-radius: 18px;
+  box-shadow: var(--shadow-card);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  color: var(--color-cyan);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.codes {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.qrItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.qrWrapper {
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  border: 3px solid var(--color-border-bright);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.qrLabel {
+  font-family: var(--font-display);
+  font-size: 0.45rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.toggleBtn {
+  background: transparent;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-family: var(--font-display);
+  font-size: 0.42rem;
+  letter-spacing: 0.06em;
+  transition: all 0.15s;
+}
+
+.toggleBtn:hover {
+  color: var(--color-cyan);
+  border-color: var(--color-cyan);
+}

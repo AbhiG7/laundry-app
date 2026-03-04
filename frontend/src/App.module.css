@@ -1,0 +1,118 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: var(--color-panel);
+  border-bottom: 2px solid var(--color-border);
+  padding: 1.2rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.headerContent {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.logo {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 0 10px rgba(233, 69, 96, 0.6));
+  animation: flicker 8s ease-in-out infinite;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  line-height: 1.6;
+  text-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.statusLight {
+  margin-left: auto;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-green);
+  box-shadow: 0 0 10px var(--color-green);
+  animation: pulse-green 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.main {
+  flex: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2.5rem 1.5rem;
+}
+
+.machineList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  padding: 4rem;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  color: var(--color-text-muted);
+}
+
+.loadingDot {
+  color: var(--color-cyan);
+  animation: blink 1s step-end infinite;
+}
+
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding: 1rem;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 0.38rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+}
+
+@keyframes flicker {
+  0%, 95%, 100% { opacity: 1; }
+  96% { opacity: 0.7; }
+  97% { opacity: 1; }
+  98% { opacity: 0.6; }
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 8px rgba(64, 224, 96, 0.4); }
+  50% { box-shadow: 0 0 18px rgba(64, 224, 96, 0.8); }
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0.1; }
+}
+
+@media (max-width: 640px) {
+  .header { padding: 1rem; }
+  .title { font-size: 0.65rem; }
+  .main { padding: 1.5rem 1rem; }
+}
