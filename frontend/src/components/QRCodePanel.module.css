@@ -25,9 +25,32 @@
   margin-bottom: 1.8rem;
 }
 
-.codes {
+.sections {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.sectionHeader {
+  font-family: var(--font-display);
+  font-size: 0.42rem;
+  color: var(--color-cyan);
+  text-align: center;
+  letter-spacing: 0.14em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.codes {
+  display: flex;
+  gap: 1.2rem;
   justify-content: center;
   flex-wrap: wrap;
 }

@@ -2,6 +2,9 @@ import { useState } from 'react'
 import { QRCodeSVG } from 'qrcode.react'
 import styles from './QRCodePanel.module.css'
 
+const WASHERS = [1, 2, 3]
+const DRYERS = [4, 5, 6]
+
 export default function QRCodePanel() {
   const [expanded, setExpanded] = useState(false)
   const baseUrl = window.location.origin
@@ -18,20 +21,43 @@ export default function QRCodePanel() {
       </div>
 
       {expanded && (
-        <div className={styles.codes}>
-          {[1, 2, 3].map(id => (
-            <div key={id} className={styles.qrItem}>
-              <div className={styles.qrWrapper}>
-                <QRCodeSVG
-                  value={`${baseUrl}/?claim=${id}`}
-                  size={128}
-                  level="M"
-                  data-testid={`qr-code-${id}`}
-                />
-              </div>
-              <span className={styles.qrLabel}>Machine {id}</span>
+        <div className={styles.sections}>
+          <div className={styles.section}>
+            <h3 className={styles.sectionHeader}>WASHERS</h3>
+            <div className={styles.codes}>
+              {WASHERS.map((id, idx) => (
+                <div key={id} className={styles.qrItem}>
+                  <div className={styles.qrWrapper}>
+                    <QRCodeSVG
+                      value={`${baseUrl}/?claim=${id}`}
+                      size={110}
+                      level="M"
+                      data-testid={`qr-code-${id}`}
+                    />
+                  </div>
+                  <span className={styles.qrLabel}>Washer {idx + 1}</span>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+          <div className={styles.section}>
+            <h3 className={styles.sectionHeader}>DRYERS</h3>
+            <div className={styles.codes}>
+              {DRYERS.map((id, idx) => (
+                <div key={id} className={styles.qrItem}>
+                  <div className={styles.qrWrapper}>
+                    <QRCodeSVG
+                      value={`${baseUrl}/?claim=${id}`}
+                      size={110}
+                      level="M"
+                      data-testid={`qr-code-${id}`}
+                    />
+                  </div>
+                  <span className={styles.qrLabel}>Dryer {idx + 1}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       )}
     </div>

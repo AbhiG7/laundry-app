@@ -3,7 +3,7 @@
   border: var(--border-card);
   border-radius: var(--radius-card);
   padding: 1.4rem 1.6rem;
-  min-width: 240px;
+  min-width: 0;
   flex: 1;
   box-shadow: var(--shadow-card);
   display: flex;

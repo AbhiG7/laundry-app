@@ -1,11 +1,11 @@
 .row {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.2rem;
   background: var(--color-panel-alt);
   border: var(--border-card);
   border-radius: 18px;
-  padding: 1.8rem 2rem;
+  padding: 1.2rem 1.2rem;
   box-shadow: var(--shadow-card);
   transition: transform 0.2s ease, border-color 0.3s ease;
   animation: slideUp 0.3s ease-out;
@@ -35,7 +35,7 @@
 .content {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   flex: 1;
   flex-wrap: wrap;
 }

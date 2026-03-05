@@ -15,7 +15,7 @@ type Store struct {
 
 func NewStore() *Store {
 	s := &Store{machines: make(map[int]*models.Machine)}
-	for i := 1; i <= 3; i++ {
+	for i := 1; i <= 6; i++ {
 		s.machines[i] = &models.Machine{ID: i, Status: models.StatusAvailable}
 	}
 	return s
@@ -26,8 +26,8 @@ func (s *Store) GetAll() []models.Machine {
 	defer s.mu.RUnlock()
 
 	now := time.Now()
-	result := make([]models.Machine, 0, 3)
-	for i := 1; i <= 3; i++ {
+	result := make([]models.Machine, 0, 6)
+	for i := 1; i <= 6; i++ {
 		m := *s.machines[i]
 		if m.Status == models.StatusInUse && m.ExpiresAt != nil {
 			remaining := int(m.ExpiresAt.Sub(now).Seconds())

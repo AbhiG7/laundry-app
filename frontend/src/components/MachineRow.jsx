@@ -4,7 +4,7 @@ import UserCard from './UserCard'
 import ClaimDialog from './ClaimDialog'
 import styles from './MachineRow.module.css'
 
-export default function MachineRow({ machine, onClaim, onRelease, autoOpenDialog }) {
+export default function MachineRow({ machine, onClaim, onRelease, autoOpenDialog, displayName }) {
   const [dialogOpen, setDialogOpen] = useState(autoOpenDialog ?? false)
 
   const handleClaimSubmit = async (formData) => {
@@ -18,7 +18,7 @@ export default function MachineRow({ machine, onClaim, onRelease, autoOpenDialog
         className={`${styles.row} ${machine.status === 'in_use' ? styles.rowInUse : ''}`}
         data-testid={`machine-row-${machine.id}`}
       >
-        <span className={styles.machineNumber}>Machine {machine.id}</span>
+        <span className={styles.machineNumber}>{displayName ?? `Machine ${machine.id}`}</span>
         <div className={styles.content}>
           <MachineDisplay status={machine.status} machineId={machine.id} />
           <UserCard

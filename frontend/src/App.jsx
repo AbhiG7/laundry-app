@@ -57,16 +57,37 @@ export default function App() {
             <span>Connecting...</span>
           </div>
         ) : (
-          <div className={appStyles.machineList}>
-            {machines.map(machine => (
-              <MachineRow
-                key={machine.id}
-                machine={machine}
-                onClaim={handleClaim}
-                onRelease={handleRelease}
-                autoOpenDialog={claimFromQR === machine.id && machine.status === 'available'}
-              />
-            ))}
+          <div className={appStyles.columnsLayout}>
+            <div className={appStyles.column}>
+              <h2 className={appStyles.columnHeader}>WASHERS</h2>
+              <div className={appStyles.machineList}>
+                {machines.filter(m => m.id <= 3).map((machine, idx) => (
+                  <MachineRow
+                    key={machine.id}
+                    machine={machine}
+                    displayName={`Washer ${idx + 1}`}
+                    onClaim={handleClaim}
+                    onRelease={handleRelease}
+                    autoOpenDialog={claimFromQR === machine.id && machine.status === 'available'}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className={appStyles.column}>
+              <h2 className={appStyles.columnHeader}>DRYERS</h2>
+              <div className={appStyles.machineList}>
+                {machines.filter(m => m.id > 3).map((machine, idx) => (
+                  <MachineRow
+                    key={machine.id}
+                    machine={machine}
+                    displayName={`Dryer ${idx + 1}`}
+                    onClaim={handleClaim}
+                    onRelease={handleRelease}
+                    autoOpenDialog={claimFromQR === machine.id && machine.status === 'available'}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         )}
 
